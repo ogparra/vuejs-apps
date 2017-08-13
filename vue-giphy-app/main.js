@@ -5,7 +5,7 @@ function setGamepic(){
 
 function getGamegifs(){
     $.ajax({
-        url: "http://api.giphy.com/v1/gifs/search?q=the%20legend%20of%20zelda&api_key=0f55bfb206064713a1fa43987a6a04f4&limit=10",
+        url: "http://api.giphy.com/v1/gifs/search?q=the%20legend%20of%20zelda&api_key=YOUR-API-KEY-HERE=10",
     }).done(function(content) {
         console.log(content.data);
         gifURL = content.data[Math.floor(Math.random()*10)].images.fixed_width.url;
@@ -13,7 +13,6 @@ function getGamegifs(){
         gif.src = gifURL;
     });
 }
-
 
 let app = new Vue({
     el: "#app", 
